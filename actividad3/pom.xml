@@ -16,7 +16,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<start-class>com.uca.capas.actividad3.Actividad3Application</start-class>
 	</properties>
+
+
 
 	<dependencies>
 		<dependency>

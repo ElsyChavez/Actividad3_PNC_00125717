@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Actividad 3 PNC</title>
+<meta charset="ISO-8859-1">
+<title>Inicio</title>
 </head>
 
 <body>
 
-	<h1>Estudiante</h1>
-	
-	<form method="post" th:action="@{/formData}" th:object="${student}">
+	<form th:action="@{/formData}" th:object="${student}" method="post">
 	
 		<label>Nombre: </label>
-		<input type="text"  th:field="*{nombre}">
+		<input type="text" th:field="*{nombre}">
 		<br>
 		<label>Apellido: </label>
-		<input type="text"  th:field="*{apellido}">
+		<input type="text" th:field="*{apellido}">
 		<br>
-		<label>Fecha de Entrada: </label>
-		<input type="text"  th:field="*{fEntrada}">
+		<label>Fecha de entrada: </label>
+		<input type="date" th:field="*{fEntrada}">
 		<br>
 		<label>Carrera: </label>
-		<input type="text"  th:field="*{carrera}">
+		<input type="text" th:field="*{carrera}">
 		<br>
 		<label>Activo: </label>
-		<input type="radio" th:field="*{estado}" th:value = *{true}>
+		<input type="radio" th:field="*{estado}" th:value="${true}">
 		<br>
 		<label>Inactivo: </label>
-		<input type="radio" th:field="*{estado}" th:value = *{false}>
+		<input type="radio" th:field="*{estado}" th:value="${false}">
 		<br>
 		<input type="submit" value="Enviar">
 		
